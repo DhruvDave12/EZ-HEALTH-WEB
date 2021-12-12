@@ -1,48 +1,158 @@
 <% layout('./layout/boilerplate.ejs') %>
 
-    <h1 class="display-5 my-3 text-center">Register</h1>
-    <!-- Form for login -->
-    <div class="container">
-        <form action="/register" method="POST" class="validated-form" novalidate>
-            <div class="mb-3">
-                <label for="username" class="form-label">Name</label>
-                <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
-            </div>
-
-            <div class="mb-3">
-                <label for="email" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email"
-                    placeholder="Email" required>
-            </div>
-            
-            <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" name="password" placeholder="Password"
-                    required>
-            </div>
-
-            <div class="mb-3">
-                <label for="Cpassword" class="form-label">Confirm Password</label>
-                <input type="password" class="form-control" id="Cpassword" name="Cpassword" placeholder="Confirm Password"
-                    required>
-            </div>
-
-            <div class="mb-3">
-                <label for="gender" class="form-label">Gender</label>
-                <select name="gender" id="gender" required>
-                    <option value="">--Please choose an option--</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-
-            <div class="mb-3">
-                <label for="age" class = "form-label">Age</label>
-                <input type="number" class="form-control" id="age" name="age" placeholder="Age" required>
-            </div>
-
-            <p class="lead">Have an account? <a href="/login">SignIn Now</a></p>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+    <div class="mx-5 my-3">
+        <button id="doctor" class="btn btn-primary">Patient</button>
+        <button id="patient" class="btn btn-warning">Doctor</button>
     </div>
+
+    <!-- Patient Register Form -->
+    <div>
+        <div class="container">
+            <form action="/register" method="POST" class="validated-form" id="patientForm" novalidate>
+                <h1 class="display-5 my-3 text-center">Patient Registration</h1>
+
+                <div class="mb-3">
+                    <label for="username" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Username"
+                        required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email"
+                        placeholder="Email" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password"
+                        required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="Cpassword" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="Cpassword" name="Cpassword"
+                        placeholder="Confirm Password" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="gender" class="form-label">Gender</label>
+                    <select name="gender" id="gender" required>
+                        <option value="">--Please choose an option--</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="age" class="form-label">Age</label>
+                    <input type="number" class="form-control" id="age" name="age" placeholder="Age" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="bloodgroup" class="form-label">Blood Group</label>
+                    <input type="text" class="form-control" id="bloodgroup" name="bloodgroup" placeholder="Blood Group"
+                        required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="weight" class="form-label">Weight</label>
+                    <input type="text" class="form-control" id="weight" name="weight" placeholder="Weight" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="pin" class="form-label">Pincode</label>
+                    <input type="text" class="form-control" id="pin" name="pincode" placeholder="Pincode" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="height" class="form-label">Height</label>
+                    <input type="text" class="form-control" id="height" name="height" placeholder="Height" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="pastc" class="form-label">Past Complications</label><br>
+                    <textarea name="pastcomp" id="pastc" cols="40" rows="10"></textarea>
+                </div>
+
+                <p class="lead">Have an account? <a href="/login">SignIn Now</a></p>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Doctor Register Form -->
+    <div>
+        <div class="container">
+            <form action="/docregister" method="POST" class="validated-form" id="doctorForm" novalidate>
+                <h1 class="display-5 my-3 text-center">Doctor Registration</h1>
+
+                <div class="mb-3">
+                    <label for="username" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Username"
+                        required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email"
+                        placeholder="Email" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password"
+                        required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="Cpassword" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="Cpassword" name="Cpassword"
+                        placeholder="Confirm Password" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="gender" class="form-label">Gender</label>
+                    <select name="gender" id="gender" required>
+                        <option value="">--Please choose an option--</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="post" class="form-label">Post</label>
+                    <input type="text" class="form-control" id="post" name="dpost" placeholder="Post" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="experience" class="form-label">Experience</label>
+                    <input type="text" class="form-control" id="experience" name="experience" placeholder="Experience"
+                        required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="contact" class="form-label">Contact Number</label>
+                    <input type="text" class="form-control" id="contact" name="contact" placeholder="Contact Number"
+                        required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="hospitalDet" class="form-label">Hospital Address</label> <br>
+                    <textarea name="hospitalAdd" id="hospitalDet" cols="40" rows="10"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="pincode" class="form-label">Pincode</label> <br>
+                    <input type="text" id="pincode" name="pincode" placeholder="Pincode" required>
+                </div>
+
+                <p class="lead">Have an account? <a href="/login">SignIn Now</a></p>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/javascript/sideSel.js"></script>

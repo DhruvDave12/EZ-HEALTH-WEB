@@ -1,0 +1,28 @@
+<% layout('./layout/boilerplate.ejs') %>
+
+  <h1 class="display-6">Details</h1>
+
+  <div class="card" style="width: 18rem;">
+    <!-- <img src="..." class="card-img-top" alt="..."> -->
+    <div class="card-body">
+      <h5 class="card-title">Name: <%= doc.username %>
+      </h5>
+      <h5 class="card-title">Email: <%= doc.email %>
+      </h5>
+      <h5 class="card-title">Gender: <%= doc.gender %>
+      </h5>
+      <h5 class="card-title">Post: <%= doc.post %>
+      </h5>
+      <h5 class="card-title">Experience: <%= doc.experience %>
+      </h5>
+      <h5 class="card-title">Contact: <%= doc.contact %>
+      </h5>
+      <h5 class="card-title">Pincode: <%= doc.pincode %>
+      </h5>
+
+      <p class = "lead">
+        <%= doc.hospitalADD %> 
+      </p>
+      <a href="#" class="btn btn-primary">Lets go</a>
+    </div>
+  </div>
