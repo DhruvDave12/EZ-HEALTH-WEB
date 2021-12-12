@@ -2,15 +2,15 @@
 
 <% if(user.appointments.length != 0) { %> 
 <% for(let u of user.appointments) { %>
-    <div class="card">
+    <div class="card" style="background: none;border: none;">
         <div class="card-body">
-          <p class="lead"><%= u.name %></p>
-          <p class="lead"><%= u.address %></p>
-          <p class="lead"><%= u.extraSymps %></p>
-          <p class="lead"><%= u.field %></p>
+          <p class="lead text-light"><%= u.name %></p>
+          <p class="lead text-light"><%= u.address %></p>
+          <p class="lead text-light"><%= u.extraSymps %></p>
+          <p class="lead text-light"><%= u.field %></p>
         </div>
       </div>
 <% } %>  
 <% } else { %>
-  <h1 class="display-6 text-center">No History</h1>
+  <h1 class="display-6 text-center text-light" style="text-transform: uppercase; font-weight: bold;">No History</h1>
   <% } %>  

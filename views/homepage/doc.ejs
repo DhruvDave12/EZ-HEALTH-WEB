@@ -1,33 +1,33 @@
 <% layout('./layout/boilerplate.ejs') %>
 
   <% if(doc.gender==="male" ) { %>
-    <h1 class="display-6 text-center" style="font-weight: bold;">Welcome, Mr. <%= doc.username %>
+    <h1 class="display-6 text-center text-light" style="font-weight: bold; text-transform: uppercase;">Welcome, Mr. <%= doc.username %>
     </h1>
     <% } %>
       <% if(doc.gender==="female" ) { %>
-        <h1 class="display-6 text-center" style="font-weight: bold;">Welcome, Mrs. <%= doc.username %>
+        <h1 class="display-6 text-center text-light" style="font-weight: bold; text-transform: uppercase;">Welcome, Mrs. <%= doc.username %>
         </h1>
         <% } %>
-          <div class="card" style="width: 100%;">
+          <div class="card" style="width: 100%; background: none; border: none;">
             <!-- <img src="..." class="card-img-top" alt="..."> -->
             <div class="card-body">
-              <h5 class="card-title">Name:  <p class="lead" style="display: inline;"><%= doc.username %></p> </h5> 
-              <h5 class="card-title">Gender:  <p class="lead" style="display: inline;"><%= doc.gender %></p> </h5> 
-              <h5 class="card-title">Region:  <p class="lead" style="display: inline;"><%= doc.region %></p> </h5> 
-              <h5 class="card-title">Field of Work:  <p class="lead" style="display: inline;"><%= doc.field %></p> </h5> 
-              <h5 class="card-title">Degree:  <p class="lead" style="display: inline;"><%= doc.post %></p> </h5> 
-              <h5 class="card-title">Pincode:  <p class="lead" style="display: inline;"><%= doc.pincode %></p> </h5>  
+              <h5 class="card-title text-light">Name:  <p class="lead" style="display: inline;"><%= doc.username %></p> </h5> 
+              <h5 class="card-title text-light">Gender:  <p class="lead" style="display: inline;"><%= doc.gender %></p> </h5> 
+              <h5 class="card-title text-light">Region:  <p class="lead" style="display: inline;"><%= doc.region %></p> </h5> 
+              <h5 class="card-title text-light">Field of Work:  <p class="lead" style="display: inline;"><%= doc.field %></p> </h5> 
+              <h5 class="card-title text-light">Degree:  <p class="lead" style="display: inline;"><%= doc.post %></p> </h5> 
+              <h5 class="card-title text-light">Pincode:  <p class="lead" style="display: inline;"><%= doc.pincode %></p> </h5>  
               <hr>
               <br>
-              <h5 class="card-title">
+              <h5 class="card-title text-light">
                   Hospital Address:
               </h5>
-              <p class="lead">
+              <p class="lead text-light">
                 <%= doc.hospitalADD %>
               </p>
             </div>
           </div>
           <div class="my-5">
-            <a href="/viewAppointments" class = "btn btn-success" style="font-size: 100%;">All Appointments</a>
+            <a href="/viewAppointments" class = "btn btn-dark" style="font-size: 100%; color: white;">All Appointments</a>
           </div>
           <!-- Displaying appointments -->

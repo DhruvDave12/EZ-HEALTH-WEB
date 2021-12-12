@@ -3,9 +3,9 @@
 <div class="d-flex space-between">
 
 <% for(let doc of doct) { %>
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 18rem; background: none; border: 2px solid white;">
         <!-- <img src="..." class="card-img-top" alt="..."> -->
-        <div class="card-body">
+        <div class="card-body text-light">
             <% if(doc.gender === "male") { %> 
             <h2 class="card-title">
                Mr. <%= doc.username%>
@@ -16,10 +16,10 @@
                 </h2>
                 <% } %>  
             <hr>
-            <h2 class="card-title diplay-6 text-success">
+            <h2 class="card-title diplay-6">
                 <%= doc.hospitalName %>
             </h2>
-            <h4 class="card-title" style="font-weight: bold;">Hospital Contact: <a style="display: inline;" href="tel:<%= doc.contact %>">
+            <h4 class="card-title" style="font-weight: bold;">Hospital Contact: <a style="display: inline; text-decoration: none; color: goldenrod;" href="tel:<%= doc.contact %>">
                     <%= doc.contact %>
                 </a>
             </h4>

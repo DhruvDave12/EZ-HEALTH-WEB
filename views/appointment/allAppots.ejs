@@ -1,12 +1,12 @@
 <% layout('./layout/boilerplate.ejs') %>
 
 <% for(let u of appots) { %>
-    <div class="card">
+    <div class="card" style="background: none;border: none;">
         <div class="card-body">
-          <p class="lead"><%= u.patientName %></p>
-          <p class="lead"><%= u.address %></p>
-          <p class="lead"><%= u.extraSymps %></p>
-          <p class="lead"><%= u.field %></p>
+          <p class="lead text-light"><%= u.patientName %></p>
+          <p class="lead text-light"><%= u.address %></p>
+          <p class="lead text-light"><%= u.extraSymps %></p>
+          <p class="lead text-light"><%= u.field %></p>
         </div>
     </div>
 <% } %>  
