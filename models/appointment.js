@@ -3,6 +3,10 @@ const Schema = mongoose.Schema;
 
 
 const appointSchema = new Schema({
+    contactNumber: {
+        type: String,
+        required: true,
+    },
     name: {
         type: String,
         required: true,

@@ -283,7 +283,7 @@ app.get('/addEvent/:id', async(req,res) => {
 })
 
 app.post('/addEvent/:id', async(req,res) => {
-    const {address, field, disease, docName, patName} = req.body;
+    const {address, field, disease, docName, patName, contactNumber} = req.body;
     const {id} = req.params;
     const user = await User.findById(id);
     const appointment = new Appointment({
@@ -292,6 +292,7 @@ app.post('/addEvent/:id', async(req,res) => {
         extraSymps: disease,
         name: docName,
         patientName: patName,
+        contactNumber: contactNumber,
     });
 
     await appointment.save();
