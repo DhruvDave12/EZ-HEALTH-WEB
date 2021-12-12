@@ -1,29 +1,45 @@
-<% layout('./layout/boilerplate.ejs') %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/homePatient.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <title>homePatient</title>
 
+<<<<<<< HEAD
   <a href="/findDoc">Find Doctor</a>
 
   <h1 class="display-6">Details</h1>
+=======
+    <style>
+      body {
+        font-family: "Poppins";
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mainpage">
+      <div class="hero">
+        <div class="navbar-hero">
+          <div class="mainHeading">Ez-Health</div>
+          <div class="subHeadings">
+            <a href="#" class="hometext">Home</a>
+            <a href="#">Our Services</a>
+            <a href="#">Find a Doctor </a>
+            <a href="#">How it Works</a>
+          </div>
+        </div>
+>>>>>>> 7ea1d3caac6450c29033c3589b781df993ebe9d0
 
-  <div class="card" style="width: 18rem;">
-    <!-- <img src="..." class="card-img-top" alt="..."> -->
-    <div class="card-body">
-      <h5 class="card-title">Name: <%= user.username %>
-      </h5>
-      <h5 class="card-title">Email: <%= user.email %>
-      </h5>
-      <h5 class="card-title">Gender: <%= user.gender %>
-      </h5>
-      <h5 class="card-title">Age: <%= user.age %>
-      </h5>
-      <h5 class="card-title">Bloodgroup: <%= user.bloodgroup %>
-      </h5>
-      <h5 class="card-title">Weight: <%= user.weight %>
-      </h5>
-      <h5 class="card-title">Height: <%= user.height %>
-      </h5>
-      <h5 class="card-title">Pincode: <%= user.pincode %>
-      </h5>
+        <p class="constatus">Device Connected</p>
 
+<<<<<<< HEAD
       <p class="lead">
         <%= user.pastComp %>
       </p>
@@ -37,3 +53,89 @@
   <a href="/addEvent/<%= user._id %>">Take Appointment</a>
 
   <script src="/javascript/loc.js"></script>
+=======
+        <div class="mainHello">
+          <div class="textHello">
+            <div class="introtxt">
+              <p class="htxt">Hello,</p>
+              <p class="nametxt">Leslle Alexander</p>
+            </div>
+            <p class="distxt">
+              it looks like its time to get your teeths checked
+            </p>
+            <a href="#" class="histxt">View History > </a>
+          </div>
+          <div class="svgHello">
+            <img src="https://i.ibb.co/Qfct9wc/dentist.png" class="helloimg" />
+          </div>
+        </div>
+
+        <div class="healthStatus">
+          <div class="heartRate">
+          <div class="r1">
+            <img src="https://i.ibb.co/zHf6ct5/Heart-Rate.png" class="hrimg" />
+            <p class="hrinfo1">104 bpm</p>
+          </div>
+          <p class="hrinfo2">Heart Rate</p>
+          <p class="hrinfo3">Your heart rate is normal</p>
+          </div>
+          <div class="steps">
+            <div class="r1">
+              <img src="https://i.ibb.co/PDmqWXj/steps.png" class="hrimg" />
+              <p class="sinfo1">2012 steps</p>
+            </div>
+            <p class="sinfo2">Steps</p>
+            <p class="sinfo3">Need: 7988 more steps to reach goal</p>
+          </div>
+          <div class="bloodPressure">
+            <div class="r1">
+              <img src="https://i.ibb.co/9v1gxgy/Blood-Pressure.png" class="hrimg" />
+              <p class="bpinfo1">98 mmHg</p>
+            </div>
+            <p class="bpinfo2">Blood Pressure</p>
+            <p class="bpinfo3">Your Blood Pressure is normal</p>
+          </div>
+        </div>
+
+        <div class="hstatus">
+        <div class="cond">
+          <div class="sleep">
+            <div class="r2">
+              <img src="https://i.ibb.co/jL7mZdN/sleep-index.png" class="slimg" />
+              <p class="slinfo1">5.5 hrs</p>
+            </div>
+            <p class="slinfo2">Sleep Condition</p>
+            <p class="slinfo3">You need to take enough of sleep</p>
+          </div>
+          <div class="overall">
+            <div class="textov">
+              <div class="overtxt">
+                <p class="ovtxt">Overall Health</p>
+              </div>
+              <p class="disovtxt">
+                5% better than previous month.
+              </p>
+              <p class="disovtxt">
+                previous month
+              </p>
+            </div>
+            <div class="svgHello">
+              <img src="https://i.ibb.co/nR0NYkS/dial.png" class="ovimg" />
+            </div>
+
+          </div>
+        </div>
+        <div class="emergency">
+          <p class="emer">EMERGENCY</p>
+        </div>
+        </div>
+
+    
+      </div>
+      <div class="sidebar">
+        <a href="#" class="addevent">ADD EVENT</a>
+      </div>
+    </div>
+  </body>
+</html>
+>>>>>>> 7ea1d3caac6450c29033c3589b781df993ebe9d0
