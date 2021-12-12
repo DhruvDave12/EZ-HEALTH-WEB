@@ -1,0 +1,21 @@
+<% layout('./layout/boilerplate.ejs') %>
+
+
+    <% for(let doc of docList) { %>
+        <div class="card" style="width: 18rem;">
+            <!-- <img src="..." class="card-img-top" alt="..."> -->
+            <div class="card-body">
+                <h2 class="card-title diplay-6">
+                    <%= doc.hospitalName %>
+                </h2>
+
+                <h6 class="card-title">Hospital Contact: <a href="tel:<%= doc.contact %>">
+                        <%= doc.contact %>
+                    </a>
+                </h6>
+                <p class="lead">
+                    <%= doc.hospitalADD %>
+                </p>
+            </div>
+        </div>
+        <% } %>

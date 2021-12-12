@@ -1,0 +1,12 @@
+<% layout('./layout/boilerplate.ejs') %>
+
+<% for(let u of user.appointments) { %>
+    <div class="card">
+        <div class="card-body">
+          <p class="lead"><%= u.name %></p>
+          <p class="lead"><%= u.address %></p>
+          <p class="lead"><%= u.extraSymps %></p>
+          <p class="lead"><%= u.field %></p>
+        </div>
+      </div>
+<% } %>  

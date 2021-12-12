@@ -1,5 +1,7 @@
 <% layout('./layout/boilerplate.ejs') %>
 
+  <a href="/findDoc">Find Doctor</a>
+
   <h1 class="display-6">Details</h1>
 
   <div class="card" style="width: 18rem;">
@@ -22,9 +24,16 @@
       <h5 class="card-title">Pincode: <%= user.pincode %>
       </h5>
 
-      <p class = "lead">
-        <%= user.pastComp %> 
+      <p class="lead">
+        <%= user.pastComp %>
       </p>
-      <a href="#" class="btn btn-primary">Lets go</a>
     </div>
   </div>
+
+  <form action="/emergency/<%= user._id %>" method="POST">
+    <button class="btn btn-danger">Emergency</button>
+  </form>
+
+  <a href="/addEvent/<%= user._id %>">Take Appointment</a>
+
+  <script src="/javascript/loc.js"></script>

@@ -36,9 +36,14 @@ const userSchema = new Schema({
     pincode: {
         type: Number,
         required: true,
-    }
-   
-})
+    },
+    appointments: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Appointment'
+        }
+    ]
+});
 
 userSchema.plugin(passportLocalMongoose);
 module.exports = mongoose.model('User', userSchema);

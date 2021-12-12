@@ -32,8 +32,27 @@ const docSchema = new Schema({
     pincode: {
         type: Number,
         required: true,
+    },
+    city: {
+        type: String,
+        required: true,
+    }, 
+    country: {
+        type: String,
+        required: true,
+    },
+    region: {
+        type: String,
+        required: true,
+    },
+    field: {
+        type: String,
+        required: true,
+    },
+    hospitalName: {
+        type: String,
+        required: true,
     }
-   
 })
 
 docSchema.plugin(passportLocalMongoose);

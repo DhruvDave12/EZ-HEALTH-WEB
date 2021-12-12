@@ -1,0 +1,32 @@
+<% layout('./layout/boilerplate.ejs') %>
+
+<div class="d-flex space-between">
+
+<% for(let doc of doct) { %>
+    <div class="card" style="width: 18rem;">
+        <!-- <img src="..." class="card-img-top" alt="..."> -->
+        <div class="card-body">
+            <% if(doc.gender === "male") { %> 
+            <h2 class="card-title">
+               Mr. <%= doc.username%>
+            </h2>
+            <% } else { %>
+                <h2 class="card-title">
+                   Mrs. <%= doc.username%>
+                </h2>
+                <% } %>  
+            <hr>
+            <h2 class="card-title diplay-6 text-success">
+                <%= doc.hospitalName %>
+            </h2>
+            <h4 class="card-title" style="font-weight: bold;">Hospital Contact: <a style="display: inline;" href="tel:<%= doc.contact %>">
+                    <%= doc.contact %>
+                </a>
+            </h4>
+            <p class="lead">
+                <%= doc.hospitalADD %>
+            </p>
+        </div>
+    </div>
+<% } %>  
+</div>
