@@ -1,0 +1,48 @@
+<% layout('./layout/boilerplate.ejs') %>
+
+    <h1 class="display-5 my-3 text-center">Register</h1>
+    <!-- Form for login -->
+    <div class="container">
+        <form action="/register" method="POST" class="validated-form" novalidate>
+            <div class="mb-3">
+                <label for="username" class="form-label">Name</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email"
+                    placeholder="Email" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password"
+                    required>
+            </div>
+
+            <div class="mb-3">
+                <label for="Cpassword" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="Cpassword" name="Cpassword" placeholder="Confirm Password"
+                    required>
+            </div>
+
+            <div class="mb-3">
+                <label for="gender" class="form-label">Gender</label>
+                <select name="gender" id="gender" required>
+                    <option value="">--Please choose an option--</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="age" class = "form-label">Age</label>
+                <input type="number" class="form-control" id="age" name="age" placeholder="Age" required>
+            </div>
+
+            <p class="lead">Have an account? <a href="/login">SignIn Now</a></p>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>

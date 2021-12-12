@@ -1,0 +1,24 @@
+<% layout('./layout/boilerplate.ejs') %>
+
+<h1 class="display-5 my-3 text-center">Login</h1>
+
+<!-- Form for login -->
+<div class="container">
+    <form action="/login" method = "POST" class="validated-form" novalidate>
+        <div class="mb-3">
+            <label for="username" class="form-label">Name</label>
+            <input type="text" class="form-control" id="username" name = "username" placeholder="Username" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name = "email" placeholder = "Email" required>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name = "password" placeholder = "Password" required>
+        </div>
+        <p class="lead">Don't have an account? <a href="/register">Register Now</a></p>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
