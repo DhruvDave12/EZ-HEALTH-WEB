@@ -1,5 +1,6 @@
 <% layout('./layout/boilerplate.ejs') %>
 
+<% if(user.appointments.length != 0) { %> 
 <% for(let u of user.appointments) { %>
     <div class="card">
         <div class="card-body">
@@ -10,3 +11,6 @@
         </div>
       </div>
 <% } %>  
+<% } else { %>
+  <h1 class="display-6 text-center">No History</h1>
+  <% } %>  

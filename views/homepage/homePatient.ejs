@@ -11,12 +11,6 @@
       type="text/css"
     />
     <title>homePatient</title>
-
-<<<<<<< HEAD
-  <a href="/findDoc">Find Doctor</a>
-
-  <h1 class="display-6">Details</h1>
-=======
     <style>
       body {
         font-family: "Poppins";
@@ -29,41 +23,26 @@
         <div class="navbar-hero">
           <div class="mainHeading">Ez-Health</div>
           <div class="subHeadings">
-            <a href="#" class="hometext">Home</a>
+            <a href="/" class="hometext">Home</a>
             <a href="#">Our Services</a>
-            <a href="#">Find a Doctor </a>
+            <a href="/findDoc">Find a Doctor </a>
             <a href="#">How it Works</a>
           </div>
         </div>
->>>>>>> 7ea1d3caac6450c29033c3589b781df993ebe9d0
+
 
         <p class="constatus">Device Connected</p>
 
-<<<<<<< HEAD
-      <p class="lead">
-        <%= user.pastComp %>
-      </p>
-    </div>
-  </div>
-
-  <form action="/emergency/<%= user._id %>" method="POST">
-    <button class="btn btn-danger">Emergency</button>
-  </form>
-
-  <a href="/addEvent/<%= user._id %>">Take Appointment</a>
-
-  <script src="/javascript/loc.js"></script>
-=======
         <div class="mainHello">
           <div class="textHello">
             <div class="introtxt">
               <p class="htxt">Hello,</p>
-              <p class="nametxt">Leslle Alexander</p>
+              <p class="nametxt"><%= user.username %></p>
             </div>
             <p class="distxt">
-              it looks like its time to get your teeths checked
+              it looks like its time to get you checked up
             </p>
-            <a href="#" class="histxt">View History > </a>
+            <a href="/viewhistory/<%= user._id %>" class="histxt">View History > </a>
           </div>
           <div class="svgHello">
             <img src="https://i.ibb.co/Qfct9wc/dentist.png" class="helloimg" />
@@ -126,16 +105,20 @@
           </div>
         </div>
         <div class="emergency">
-          <p class="emer">EMERGENCY</p>
+          <form action="/emergency/<%= user._id %>" method="POST">
+            <button class="emer">Emergency</button>
+          </form>
         </div>
         </div>
 
     
       </div>
       <div class="sidebar">
-        <a href="#" class="addevent">ADD EVENT</a>
+        <div class="container">
+          
+        </div>
+        <a href="/addEvent/<%= user._id %>" class="addevent">ADD EVENT</a>
       </div>
     </div>
   </body>
 </html>
->>>>>>> 7ea1d3caac6450c29033c3589b781df993ebe9d0
