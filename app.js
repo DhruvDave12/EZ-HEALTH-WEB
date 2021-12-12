@@ -219,8 +219,7 @@ app.post('/docregister', async(req,res) => {
 })
 
 
-
-app.post('/login', passport.authenticate('local', { failureFlash: true, failureRedirect: '/login' }), async (req, res) => {
+app.post('/doclogin', passport.authenticate('local', { failureFlash: true, failureRedirect: '/login' }), async (req, res) => {
     const { email } = req.body;
     // req.flash('success', 'Welcome Back');
 
